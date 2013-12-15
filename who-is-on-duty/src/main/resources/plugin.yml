@@ -1,0 +1,39 @@
+name: WhoIsOnDuty
+main: com.kleptotech.WhoIsOnDuty
+version: 0.0.1-SNAPSHOT
+author: Klepto (dfsf5263)
+
+permissions:
+    whoisonduty.*:
+        description: Gives access to all Who Is On Duty commands
+        children:
+            whoisonduty.mod: true
+            whoisonduty.admin: true
+    whoisonduty.mod:
+        description: Gives access to Who Is On Duty moderator commands
+        default: op
+    whoisonduty.admin:
+        description: Gives access to Who Is On Duty admin commands
+        default: op
+        
+commands:
+   wiod:
+      description: Who Is On Duty commands.
+      usage: |
+               Commands overview:
+               /<command> onduty: This command will make you on duty.
+               /<command> offduty: This command will make you off duty.
+               /<command> descr <message>: This command will set your custom message for the on duty board.
+               /<command> accept: This command will accept a help request.
+               /<command> done: This command will close a help request.
+               /<command> tickets: This command will return a list of available offline tickets.
+               /<command> getticket [Ticket Number]: This command will get the next available offline ticket or specified ticket number.
+               /<command> closeticket: This command will close your currently selected offline ticket.
+               /<command> time: *ADMIN ONLY* This command will show moderator's total on duty time.
+               /<command> count: *ADMIN ONLY* This command will show moderator's completed ticket count.
+   mods:
+      description: List of On Duty Mods.
+      usage: /<command>
+   ticket:
+      description: This command is for creating offline moderator tickets.
+      usage: "Usage: '/ticket <Problem Description>'"
